@@ -1,0 +1,7 @@
+    echo "Set up the basic requirements of a project."
+	echo "usage:	./script.sh [-r -m -l -h]"
+	#echo "Mandatory options:"
+	echo "NAME		- Your project's name"
+	echo "LANGUAGE	- Your project's language (C, HTML)"
+	echo "DIRECTORY	- Where should this project be created"
+	echo "-h		- Display this help message"

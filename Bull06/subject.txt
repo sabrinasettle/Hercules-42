@@ -1,0 +1,7 @@
+Corewar is a game where programs battle each other,
+the goal being that your program prevents other programs from
+functioning correctly by anymeans necessary
+
+live instrustion that means hey Im still alive
+
+the winner of the game is the last program who rn the "live" instruction

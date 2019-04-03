@@ -1,0 +1,10 @@
+run a binary and stop the horses effect on your computer 
+Write a script that stops them running
+
+Then steal them (write a program with your own horses), to present to King Eurystheus, played by your corrector
+
+extra: can you stop them without 9 or 17?
+
+Can you figure out what each mare is doing?
+
+Would even Zeus hate your horses?

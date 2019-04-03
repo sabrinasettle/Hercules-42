@@ -1,0 +1,9 @@
+l2:		sti r1, %:live, %1
+			sti r1, %:livespawn, %1
+		and r1, %0, r2
+		fork %:livespawn
+
+live:	live %1
+		zjmp %:live
+
+livespawn: live %1

@@ -1,0 +1,18 @@
+Create a way to access your virtual machine without a password
+if using a password you fail and if you turn somehting very wrong you fail
+
+
+ssh and RSA to connect to your virtual machine without a password
+
+ssh keys
+
+
+SSH_USR=$1 //root
+SSH_IPADDR=$2 //cbagdon.me
+
+generate the ssh key and upload it to server
+
+if able to login with admin, you reset the password or continue to break into the server
+
+doing a break by using all possible pass keys would take to long, so the best way is to try and
+would be to go in and change settings or to change permissions for your user account
