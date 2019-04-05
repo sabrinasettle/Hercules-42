@@ -1,4 +1,4 @@
-
+#!/bin/bash
 
 Black='\033[0;30m'
 Red='\033[0;31m'         
@@ -11,33 +11,34 @@ White='\033[0;37m'
 NC='\033[0m'
 
 Error="${Yellow}Hey could you say yay or nay please???  \n${NC}"
+No="${Red}Thats ok no one likes you anyways \n${NC}"
+
+if [[ ("$1" == "-h" || "$1" == "--help") && $# == 1 ]] ; then
+    sh ./extrashs/helpfile.sh
+    exit
+fi
 
 # echo "Im working dodam it"
-
     while true; do
         read -p "Hey you here for a new project? " yn
         case $yn in
-            [Yy]* ) echo "${Red}Cool lets get started \n${NC}"; break;;
-            [Nn]* ) echo "${Red}Alright, I guess, see you soon maybe? ${NC}"; break;;
+            [Yy]* ) echo "${White}Cool lets get started \n${NC}"; break;;
+            [Nn]* ) echo "${Red}Alright, I guess, see you soon maybe? ${NC}"; exit;;
             *) echo "${Error}" ;;
         esac
     done
 
-# if [[ ("$1" == "-c" || "$1" == "--create") && $# == 2 ]]; then
-
     while [ "$prename" == "" ];do
     echo "So what do you want the project to be called? "
-    # Project=$(echo "$2" | tr '[:upper:]' '[:lower:]')
     echo "Project name: "
     read prename
-    echo "Ok you now have a project named: $prename"
+    echo "${Red}Ok you now have a project named: $prename \n${NC}"
     done
     Project=$(echo $prename | tr -s ' ')
 
-# read -p "Hey heres a question what language do you program in?" lang
     Directory=./$Project$sp$n
     {
-        # If folder exists, add a number after its name.
+        # If folder exists, add a _number after its name.
         while ! mkdir $Directory
         do
             sp="_"
@@ -45,13 +46,37 @@ Error="${Yellow}Hey could you say yay or nay please???  \n${NC}"
             Directory=./$Project$sp$n
         done
     } &> /dev/null
-    echo "Project path: ${PWD/#$HOME/~}"/$Project
+    echo "${Yellow}Project path: ${PWD/#$HOME/~}"/$Project ${NC}
+
+    # Langauge????
+    read -p "What language do you program in? " Lang
+    Lang=$( echo "$Lang" | tr '[:upper:]' '[:lower:]')
+    if [[ "$Lang" == "c" ]]; then
+        mkdir $Directory/srcs
+        mkdir $Directory/includes
+        mkdir $Directory/lib
+        echo "${Green}cool thats the only langauge I know as well\n ${NC}" 
+    else
+        echo "${Green}cool idk and idc so C!\n${NC}"
+    fi
+
+    sh ./extrashs/create_Makefile.sh "$Directory"
+
+    #ask if they want their libft
+    while true; do
+        read -p "Do you want your libft? " yn
+        case $yn in
+            [Yy]* ) sh ./extrashs/create_Libft.sh $Directory; echo "${Cyan}Cool you got yourself libft\n${NC}"; break;;
+            [Nn]* ) echo "${No}"; break;;
+            * ) echo "${Error}"
+        esac
+    done
 
     while true; do
         read -p "Do you want a author file? " yn
         case $yn in
-            [Yy]* ) sh ./extrashs/create_author.sh $Directory; echo "${Yellow}Cool you got yourself a author file \n${NC}"; break;;
-            [Nn]* ) echo "${Yellow}Thats ok no one likes you anyways \n${NC}"; break;;
+            [Yy]* ) sh ./extrashs/create_author.sh $Directory; echo "${Blue}Cool you got yourself a author file \n${NC}"; break;;
+            [Nn]* ) echo "${No}"; break;;
             * ) echo "${Error}"
         esac
     done
@@ -59,12 +84,12 @@ Error="${Yellow}Hey could you say yay or nay please???  \n${NC}"
     while true; do
         read -p "Do you want a gitignore file? " yn
         case $yn in
-            [Yy]* ) sh ./extrashs/create_gitignore.sh $Directory; echo "${Green}Cool you got yourself a gitignore file \n${NC}"; break;;
-            [Nn]* ) echo "${Green}Thats ok no one likes you anyways \n${NC}"; break;;
+            [Yy]* ) sh ./extrashs/create_gitignore.sh $Directory; echo "${Purple}Cool you got yourself a gitignore file \n${NC}"; break;;
+            [Nn]* ) echo "${No}"; break;;
             * ) echo "${Error}"
         esac
     done
 
-    
+    echo "${White}EY, ALL DONE! REMEMBER YOUR TOWEL! ${NC}"
 
-    echo "${Yellow}EY, ALL DONE! REMEMBER YOUR TOWEL! ${NC}"
+    exit 0
