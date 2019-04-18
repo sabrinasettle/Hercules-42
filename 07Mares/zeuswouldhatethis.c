@@ -6,7 +6,13 @@
 /*   By: ssettle <ssettle@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/14 17:47:26 by ssettle           #+#    #+#             */
-/*   Updated: 2019/04/14 17:47:27 by ssettle          ###   ########.fr       */
+/*   Updated: 2019/04/18 16:07:15 by ssettle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
+
+int main(int argc, char **argc)//could be void
+{
+
+} 
