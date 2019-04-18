@@ -6,11 +6,12 @@
 #    By: ssettle <ssettle@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/20 12:44:32 by ssettle           #+#    #+#              #
-#    Updated: 2019/04/17 21:16:22 by ssettle          ###   ########.fr        #
+#    Updated: 2019/04/17 22:16:17 by ssettle          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #Mandorty part: Send an email out to warriors to join your army! Write a program that uses SMTP to send email
+#apt-get shh for debian machine
 
 import smtplib
 import ssl #needed?
@@ -45,14 +46,3 @@ try:
 	print ("Message sent")
 except:
 	print ("OH DEAR NO GIRDLE FOR YOU HERC <3")
-
-
-
-
-
-
-
-
-
-
-print 'Email sent successfully'
