@@ -6,7 +6,7 @@
 /*   By: ssettle <ssettle@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/14 17:47:26 by ssettle           #+#    #+#             */
-/*   Updated: 2019/04/18 19:50:26 by ssettle          ###   ########.fr       */
+/*   Updated: 2019/04/20 16:09:56 by ssettle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,15 @@
 
 //SIGINT -- ctrl c
 
-void
+void fart_face()
+{
+
+}
+
+void loud_mouth()
+{
+	
+}
 
 
 int main(int argc, char **argv)//could be void
