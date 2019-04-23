@@ -1,48 +1,57 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   zeuswouldhatethis.c                                :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: ssettle <ssettle@student.42.fr>            +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/14 17:47:26 by ssettle           #+#    #+#             */
-/*   Updated: 2019/04/20 16:09:56 by ssettle          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-// Marebreeder Sabrina123
+#include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 /*
-** Fork - fork() system herccall use for creates a new process, which is called a
-** child process
+** Fork - fork() system herccall use for creates a new process, which is called
+** a child process
 */
-
 
 /*
 ** Signals in C - a signal is a software generated interrrupt that is sent to a
-** process by the OS because of when user presses ctrl-c or another process tell
-** something to this process. Any command like thing the the OS sends to the program
-** saying that somehting happened
+** process by the OS because of when user presses ctrl-c or another process
+** tell something to this process.Any command like thing the the OS
+** sends to the program saying that somehting happened. SUCH AS SIGINT --ctrl c
 */
 
-//SIGINT -- ctrl c
+/*
+** system() executes any commands the os allows
+*/
 
-void fart_face()
+// void	giveyousomeshit(void)
+// {
+// 	system("for ((i=0; 1; i++)); do echo withloveandaffection > poo$i.shit; sleep 0.5; done");
+// }
+
+// void	poopoo(void)
+// {
+// 	while (1)
+// 		system("echo poopoo; sleep 0.05");
+// }
+
+// void	settingvolume(void)
+// {
+// 	// while (1)
+// 	// {
+// 		system(" osascript \
+// 			-e 'set Volume 4' &");
+// 	// }
+// }
+
+// void	wordplay(void)
+// {
+// 	settingvolume(); //ok so this gets called and then ruins the process because it never ends
+// 	// system("say -v Oliver 'tra la la ala al' & ; sleep 0.05");
+
+// 	//"say -v Oliver -f ./whatsnew.txt &");
+// }
+
+int		main(void)
 {
-
-}
-
-void loud_mouth()
-{
-	
-}
-
-
-int main(int argc, char **argv)//could be void
-{
-	if (fork())
-
-	else
-		fork() ? fart_face() : loud_mouth();
+	while (1)
+	{
+		fork();
+		printf("meow");
+	}
 	return (0);
 }
