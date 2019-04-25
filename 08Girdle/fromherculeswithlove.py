@@ -6,7 +6,7 @@
 #    By: ssettle <ssettle@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/20 12:44:32 by ssettle           #+#    #+#              #
-#    Updated: 2019/04/24 15:14:07 by ssettle          ###   ########.fr        #
+#    Updated: 2019/04/24 15:32:21 by ssettle          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,14 +21,15 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
+# introduces the ability to encode in the email for images for gifs
 from email import encoders
 
 def baby_tell_me_what_you_want():
 	sender = raw_input('With love from : (enter Herc) ') # gets the email address of Herc
 	if sender == "Herc":
 		sender = "hercloveshippo08@gmail.com"
-		senderpasswd = getpass.getpass("Herc's email password: ") # uses the getpass to get the password
-		#if senderpasswd !=
+		# uses the getpass to get the password
+		senderpasswd = getpass.getpass("Herc's email password: ")
 		recipient = raw_input('hey whats your intra id?: (seriously enter your intra) ')
 		if '@' not in recipient: #adds the address to the intra login
 			recipient = recipient + '@student.42.us.org'

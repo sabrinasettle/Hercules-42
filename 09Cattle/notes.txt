@@ -1,0 +1,29 @@
+Siege is an http load testing and benchmarking utility.
+It was designed to let web developers measure their code under duress,
+to see how it will stand up to load on the internet.
+Siege supports basic authentication, cookies, HTTP, HTTPS and FTP protocols.
+It lets its user hit a server with a configurable number of simulated clients.
+Those clients place the server “under siege.
+
+
+benchmarking is a process for obtaining a measure. benchmarks are the 'what' and benchmarking is the 'how'.
+Benchmarks are designed to mimic a particular type of workload on a component or system
+
+
+** SIEGE 2.72
+** Preparing 10 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...      done.
+
+Transactions:              263 hits
+Availability:              100.00 %
+Elapsed time:              9.36 secs
+Data transferred:          0.35 MB
+Response time:             0.35 secs
+Transaction rate:          28.10 trans/sec
+Throughput:                0.04 MB/sec
+Concurrency:               9.82
+Successful transactions:   263
+Failed transactions:       0
+Longest transaction:       0.54
+Shortest transaction:      0.19
