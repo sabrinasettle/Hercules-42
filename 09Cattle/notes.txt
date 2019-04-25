@@ -10,6 +10,8 @@ benchmarking is a process for obtaining a measure. benchmarks are the 'what' and
 Benchmarks are designed to mimic a particular type of workload on a component or system
 
 
+siege -c 10 -b -t 10S http://example.com/
+
 ** SIEGE 2.72
 ** Preparing 10 concurrent users for battle.
 The server is now under siege...
