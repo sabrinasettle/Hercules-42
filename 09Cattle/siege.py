@@ -6,7 +6,7 @@
 #    By: ssettle <ssettle@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/24 18:34:36 by ssettle           #+#    #+#              #
-#    Updated: 2019/04/24 20:03:49 by ssettle          ###   ########.fr        #
+#    Updated: 2019/04/28 14:11:13 by ssettle          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,8 +40,17 @@ def attack():
 			print 'Bad url'
 			sys.exit(1)
 		i += 1
+
 # FLAGS
 
+
+
+# VALIDATE URLS
+try:
+	r = requests.get(url)
+except:
+	print('error: bad url <{}>'.format(url))
+	sys.exit(1)
 
 
 # PRINTS RESULTS FROM ATTACK
