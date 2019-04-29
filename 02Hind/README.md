@@ -6,4 +6,3 @@ This project aims to give you a basic approach on a REST API, how it works and p
 **Mandatory Part**
 Write a script that takes a text file as a paramter with one login per line and returns the location of each person.
 
-![Image] (APIAPP)
