@@ -6,7 +6,7 @@
 #    By: ssettle <ssettle@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/24 18:34:36 by ssettle           #+#    #+#              #
-#    Updated: 2019/04/29 17:42:30 by ssettle          ###   ########.fr        #
+#    Updated: 2019/04/29 19:16:47 by ssettle          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,14 +15,22 @@
 import requests
 import sys
 import time
-import threading #havent used yet
 import os
-import argparse #havent used yet
+import argparse
+
+# FLAGS
+parser = argparse.ArgumentParser()
+parser.add_argument('-u', metavar='url')
+parser.add_argument('-c', metavar='clients')
+parser.add_argument('-r', metavar='results')
+args = parser.parse_args()
+
+# FLAG CONDITIONS
+url = args.u if args.u != None else 'https://google.com'
+clients = args.c if args.c not in (None, 0) else 20
+reqs = args.r if args.r not in (None, 0) else 5
 
 # PARAMETERS
-url = 'https://google.com'
-reqs = 5
-clients = 5
 results = {
 	'transactions': clients * reqs,
 	'success': 0,
