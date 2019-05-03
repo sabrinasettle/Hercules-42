@@ -1,0 +1,19 @@
+Test
+INPUTS:
+
+URL:		https://google.com
+Clients:	20
+Requests:	5 
+
+RESULTS:
+
+Transactions:				100 hits
+Availability:				0 %
+Elapsed time:				8.0 secs
+Data transfered:			271.0 KB
+Average response time:		0.0 secs
+Successful transactions:	0
+Failed transactions:		100
+Totaled response times:		7.74 secs
+
+
