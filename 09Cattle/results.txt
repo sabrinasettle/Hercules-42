@@ -1,0 +1,10 @@
+RESULTS
+
+Transactions:			100 hits
+Availability:			100 %
+Elapsed time:			11.0 secs
+Data transfered:		1113.0 KB
+Average response time:		0.0 secs
+Successful transactions:	100
+Failed transactions:		0
+Totaled response times:		10.72 secs
