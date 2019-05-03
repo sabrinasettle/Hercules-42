@@ -6,7 +6,7 @@
 #    By: ssettle <ssettle@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/24 18:34:36 by ssettle           #+#    #+#              #
-#    Updated: 2019/05/02 19:36:22 by ssettle          ###   ########.fr        #
+#    Updated: 2019/05/02 20:10:44 by ssettle          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,6 @@ import sys
 import time
 import os
 import argparse
-import subprocess
 
 # FLAGS
 parser = argparse.ArgumentParser()
@@ -80,19 +79,46 @@ print 'Average response time:\t\t', round(results['time'] / results['transaction
 print 'Successful transactions:\t', results['success']
 print 'Failed transactions:\t\t', results['failure']
 print 'Totaled response times:\t\t', round(results['time'], 3), 'secs'
+print '\n'
 
 stdoutOrgin = sys.stdout
-with open("results.txt", 'w') as newfile:
-	sys.stdout = newfile
-	newfile.write("RESULTS\n\n")
-	print 'Transactions:\t\t\t', results['transactions'], 'hits'
-	print 'Availability:\t\t\t', (results['success'] * 100) / results['transactions'], '%'
-	print 'Elapsed time:\t\t\t', round(results['time']), 'secs'
-	print 'Data transfered:\t\t', round(results['size'] / 1024), 'KB'
-	print 'Average response time:\t\t', round(results['time'] / results['transactions']), 'secs'
-	print 'Successful transactions:\t', results['success']
-	print 'Failed transactions:\t\t', results['failure']
-	print 'Totaled response times:\t\t', round(results['time'], 3), 'secs'
+with open("results.txt", 'a') as newfile:
+	if newfile.tell() == 0:
+		print 'new results file created'
+		sys.stdout = newfile
+		newfile.write("Test\n")
+		newfile.write("INPUTS:\n\n")
+		print 'URL:\t\t', url
+		print 'Clients:\t', clients
+		print 'Requests:\t', reqs, '\n'
+		newfile.write("RESULTS:\n\n")
+		print 'Transactions:\t\t\t\t', results['transactions'], 'hits'
+		print 'Availability:\t\t\t\t', (results['success'] * 100) / results['transactions'], '%'
+		print 'Elapsed time:\t\t\t\t', round(results['time']), 'secs'
+		print 'Data transfered:\t\t\t', round(results['size'] / 1024), 'KB'
+		print 'Average response time:\t\t', round(results['time'] / results['transactions']), 'secs'
+		print 'Successful transactions:\t', results['success']
+		print 'Failed transactions:\t\t', results['failure']
+		print 'Totaled response times:\t\t', round(results['time'], 3), 'secs'
+		print '\n'
+	else:
+		print 'results.txt already exists'
+		sys.stdout = newfile
+		newfile.write("Test\n")
+		newfile.write("INPUTS:\n")
+		print 'URL:\t\t', url
+		print 'Clients:\t', clients
+		print 'Requests:\t', reqs, '\n'
+		newfile.write("RESULTS:\n")
+		print 'Transactions:\t\t\t\t', results['transactions'], 'hits'
+		print 'Availability:\t\t\t\t', (results['success'] * 100) / results['transactions'], '%'
+		print 'Elapsed time:\t\t\t\t', round(results['time']), 'secs'
+		print 'Data transfered:\t\t\t', round(results['size'] / 1024), 'KB'
+		print 'Average response time:\t\t', round(results['time'] / results['transactions']), 'secs'
+		print 'Successful transactions:\t', results['success']
+		print 'Failed transactions:\t\t', results['failure']
+		print 'Totaled response times:\t\t', round(results['time'], 3), 'secs'
+		print '\n'
 
 sys.stdout.close()
 
