@@ -8,3 +8,5 @@ Write a script that takes a text file as a paramter with one login per line and 
 
 <img width="804" alt="APIAPP" src="https://user-images.githubusercontent.com/22520221/57118658-afa5cf00-6d19-11e9-8952-2f12b68dc20e.png">
 
+**How to Run**
+

@@ -8,4 +8,6 @@ So the goal of this project is to schedule a one time task at a precise date and
 Write a small shell script that when you run it will execute it's code on the upcoming 21st of December at 8:42am.
 The content can be anything you want.
 
-# Commands to Run
+**Commands to Run**
+
+sh 12_21_8:42.sh

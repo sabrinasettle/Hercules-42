@@ -8,4 +8,13 @@ Then you're going to want to track every single and tiniest memory leak.
 **Mandatory Part**
 For this you just need to turn in the same program provided but with no memory leaks. You can change whatever you want in it except the lines that are malloc-ing and the program needs to be performing the exact same task with the same result.
 
-# Commands to Run
+**Commands to Run**
+
+Orignal code is in filthystables.c and the cleaned up version is in stables.c
+
+Compile -
+	gcc -g stables.c -o stables
+
+Valgrind -
+	valgrind --leak-check=full ./stables
+
