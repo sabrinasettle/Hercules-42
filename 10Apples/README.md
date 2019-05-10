@@ -13,8 +13,9 @@ https://linuxconfig.org/passwordless-ssh
 https://www.linode.com/docs/security/authentication/use-public-key-authentication-with-ssh/
 https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-debian-9
 
-su - uncomment the PORT 22
+https://www.linuxquestions.org/questions/debian-26/ssh-server-setup-419117/
 
+su - uncomment the PORT 22
 
 command to make key:
 sh howdoyoulikethemapples.sh hercules localhost 1313 -k
