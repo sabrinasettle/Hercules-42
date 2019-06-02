@@ -1,6 +1,7 @@
 Create a way to access your virtual machine without a password
 if using a password you fail and if you turn somehting very wrong you fail
 
+hercule vm name is apples42
 
 ssh and RSA to connect to your virtual machine without a password
 
