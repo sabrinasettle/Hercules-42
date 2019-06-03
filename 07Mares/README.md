@@ -1,4 +1,4 @@
-# Hercules 06: Cretan Bull
+# Hercules 07: Mares of Diomedes
 
 **Goals**
 For this labour will release a dangerous pack of Mares, then steal them for King Eurystheus.
