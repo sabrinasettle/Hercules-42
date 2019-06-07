@@ -14,4 +14,3 @@ live:
 
 spawn:
 	live %1	; [0x01] allows a process to stay alive.
-

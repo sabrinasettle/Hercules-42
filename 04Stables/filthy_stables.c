@@ -60,11 +60,11 @@ int		main(void) {
 		{
 			tmp->next = list;
 			list = tmp;
-		}			
+		}
 	}
 	magic += sum_unrolled(list);
 	write(1, &magic, 8);
 	del_unrolled(list);
-    while(1);
+    // while(1);
 	return(0);
 }
